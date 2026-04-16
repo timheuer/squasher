@@ -43,12 +43,6 @@ Squasher relies on the `contribSourceControlHistoryItemMenu` **proposed API**, s
 - If the commits have already been pushed, you will need to force-push afterwards — Squasher does not do this automatically.
 - The Source Control Graph context menu relies on the `scm/historyItem/context` menu id. The Command Palette command works regardless.
 
-## Release Notes
-
-### 0.0.1
-
-Initial preview.
-
 ## Credits
 
 - Extension icon: <a href="https://www.flaticon.com/free-icons/squash" title="squash icons">Squash icons created by Umeicon - Flaticon</a>.
