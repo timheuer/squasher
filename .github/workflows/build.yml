@@ -16,13 +16,13 @@ jobs:
             contents: write
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@v4
+            - uses: actions/checkout@v6
               with:
                   fetch-depth: 0
 
-            - uses: actions/setup-node@v4
+            - uses: actions/setup-node@v6
               with:
-                  node-version: 20
+                  node-version: 22
 
             - name: 📦 Install dependencies
               run: npm install
@@ -81,14 +81,14 @@ jobs:
                   Write-Host "::notice::Published to VS Code Marketplace: https://marketplace.visualstudio.com/items?itemName=${{ steps.meta.outputs.marketplaceId }}"
 
             - name: ⬆️ Upload artifact
-              uses: actions/upload-artifact@v4
+              uses: actions/upload-artifact@v7
               with:
                   name: ${{ github.event.repository.name }}.vsix
                   path: ./*.vsix
 
             - name: 🏷️ Tag and Release
               id: tag_release
-              uses: softprops/action-gh-release@v1
+              uses: softprops/action-gh-release@v3
               with:
                   body: Release ${{ steps.nbgv.outputs.SimpleVersion }}
                   tag_name: ${{ steps.nbgv.outputs.SimpleVersion }}
