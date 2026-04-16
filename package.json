@@ -8,6 +8,7 @@
     "name": "Tim Heuer",
     "url": "https://github.com/timheuer"
   },
+  "preview": true,
   "icon": "icon.png",
   "repository": {
     "type": "git",
